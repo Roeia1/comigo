@@ -1,0 +1,47 @@
+@media (max-width: 700px) {
+  #top-nav {
+    display: none
+  }
+}
+
+a {
+  color: black;
+  text-decoration-line: none;
+}
+
+header li a:hover, header li a:focus {
+  color: #e74c3c;
+}
+
+header ul ul li a:hover, header ul ul li a:focus {
+  background-color: #e74c3c;
+  color: white;
+}
+
+#top-footer {
+  background-color: #555555;
+}
+
+#top-footer li a {
+  color: darkgray;
+}
+
+#top-footer ul ul li a {
+  color: grey;
+}
+
+#top-footer ul ul li a:hover, #top-footer ul ul li a:focus {
+  color: #e74c3c;
+}
+
+#bottom-footer {
+  background-color: black;
+}
+
+#bottom-footer, #bottom-footer a {
+  color: grey;
+}
+
+#bottom-footer a:hover, #bottom-footer a:focus {
+  color: white;
+}
