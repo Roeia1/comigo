@@ -1,52 +1,281 @@
 @media (max-width: 700px) {
-  .top-nav {
+  .header-nav {
     display: none
   }
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: normal;
 }
 
 a {
   color: black;
   text-decoration-line: none;
+  outline: none;
 }
 
-.top-nav li a:hover,
-.top-nav li a:focus {
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+
+.reset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  padding: 1em;
+  border-radius: 10em;
+}
+
+.button-main {
+  color: white;
+  background-color: #e74c3c;
+}
+
+.button-secondery {
+  color: #e74c3c;
+  background-color: white;
+}
+
+header {
+  display: flex;
+}
+
+.logo {
+  padding-left: 3em;
+  padding-right: 40%;
+}
+
+.active-page {
+  color: red;
+  font-weight: bold;
+}
+
+.header-nav > ul {
+  display: flex;
+}
+
+.header-nav > ul > li {
+  padding: 0 2em;
+}
+
+
+.header-nav > ul > li > a:hover,
+.header-nav > ul > li > a:focus {
   color: #e74c3c;
 }
 
-.top-nav ul ul a:hover,
-.top-nav ul ul a:focus {
+.header-nav ul ul a:hover,
+.header-nav ul ul a:focus {
   background-color: #e74c3c;
   color: white;
 }
 
-.top-footer {
-  background-color: #555555;
+.intro {
+  background-image: url("../assets/other/ic-EI-cloud-brain-hp.png"), url("../assets/other/home-featured-bg.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center, center;
+  background-size: 40%, auto;
+  text-align: center;
+  height: 500px;
+  padding-top: 6em;
+  color: white;
 }
 
-.top-footer li a {
-  color: darkgray;
+.intro h1 {
+  font-size: 75px;
+  margin-bottom: 0.4em;
 }
 
-.top-footer ul ul li a {
-  color: grey;
+.why {
+  height: 500px;
+  text-align: center;
 }
 
-.top-footer ul ul li a:hover,
-.top-footer ul ul li a:focus {
+.why > div {
+  margin: 0 auto;
+  padding: 6% 0 3% 0;
+  width: 600px;
+}
+
+.why h2 {
+  font-size: 60px;
+  margin: 0;
+}
+
+.why p {
+  font-size: 35px;
+  margin: 0 0 0.8em;
+}
+
+.tv {
+  display: flex;
+  height: 720px;
+}
+
+.EI {
+  width: 50%;
+  background-image: url("../assets/other/ic-EI-cloud-brain-hp.png"), url("../assets/other/home-tv-service-bg1.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center 3.5em, center;
+  background-size: 50%, auto;
+  text-align: center;
+  color: white;
+}
+
+.EI > h2 {
+  padding-top: 16em;
+}
+
+.STB {
+  width: 50%;
+  background-image: url("../assets/other/ic-stb-screens.png"), url("../assets/other/home-tv-service-bg2.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: left top, center;
+  background-size: 45%, auto;
+  text-align: left;
+}
+
+.STB > h2 {
+  padding-top: 16em;
+}
+
+.personalize {
+  height: 650px;
+  background-image: url("../assets/other/screen_whos_on.jpg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 50%;
+  text-align: left;
+  padding-left: 8em;
+}
+
+.personalize h2 {
+  margin-top: 0;
+  padding-top: 6em;
+}
+
+.call-to-action {
+
+}
+
+.blog {
+  display: flex;
+  height: 450px;
+}
+
+.blog-headline {
+  width: 16.66%;
+  background-color: #e74c3c;
+  color: white;
+}
+
+.blog-headline h2 {
+  padding-top: 8em;
+  font-size: 30px;
+}
+
+.blog-list {
+  display: flex;
+  width: 83.34%;
+}
+
+.blog-list li {
+  width: 20%;
+  background-repeat: no-repeat;
+  background-position: center, center;
+}
+
+.blog-list p {
+  padding-top: 15em;
+}
+
+.blog-list a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+
+.blog-list p {
+  margin: 0;
+}
+
+.blog-list li:nth-child(1) {
+  background-image: url("../assets/blog/ibc_post_EI-750x508.png");
+}
+
+.blog-list li:nth-child(2) {
+  background-image: url("../assets/blog/IMG_9294-750x563.jpeg");
+}
+
+.blog-list li:nth-child(3) {
+  background-image: url("../assets/blog/Image-Blog-Yoav_356121362-copy-750x563.jpg");
+}
+
+.blog-list li:nth-child(4) {
+  background-image: url("../assets/blog/post_tv_connect-750x508.jpeg");
+}
+
+.blog-list li:nth-child(5) {
+  background-image: url("../assets/blog/post_quality-750x508.jpeg");
+}
+
+.footer-top {
+  display: flex;
+  height: 300px;
+  background-color: #3d3d3d;
+  padding-top: 2em;
+}
+
+.footer-nav {
+  font-size: 20px;
+  padding-left: 5em;
+  padding-right: 10em;
+}
+
+.footer-nav > ul {
+  display: flex;
+}
+
+.footer-nav > ul > li {
+  padding: 0 2em;
+}
+
+.footer-nav > ul > li > a {
+  color: #fff;
+}
+
+.footer-nav ul ul a {
+  color: #7a7a7a;
+}
+
+.footer-nav ul ul a:hover,
+.footer-nav ul ul a:focus {
   color: #e74c3c;
 }
 
-.bottom-footer {
+.footer-bottom {
   background-color: black;
+  display: flex;
+  height: 60px;
 }
 
-.bottom-footer,
-.bottom-footer a {
-  color: grey;
+.footer-bottom > ul {
+  display: flex;
 }
 
-.bottom-footer a:hover,
-.bottom-footer a:focus {
+.footer-bottom,
+.footer-bottom a {
+  color: #7a7a7a;
+}
+
+.footer-bottom a:hover,
+.footer-bottom a:focus {
   color: white;
 }
