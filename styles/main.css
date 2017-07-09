@@ -38,6 +38,10 @@ h3 {
   padding: 0;
 }
 
+.hidden {
+  display: none;
+}
+
 .button {
   border-radius: 15em;
   font-size: 1.25rem;
@@ -54,37 +58,70 @@ h3 {
   background-color: white;
 }
 
-header {
-  display: flex;
-}
-
-.logo {
-  padding-left: 3em;
-  padding-right: 40%;
-}
-
 .active-page {
   color: red;
   font-weight: bold;
 }
 
-.header-nav > ul {
-  display: flex;
+.service > .active-service {
+  color: red;
 }
 
-.header-nav > ul > li {
-  padding: 0 2em;
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 66px;
+  width: 100%;
+  background-color: white;
+  line-height: 66px;
 }
 
-.header-nav > ul > li > a:hover,
-.header-nav > ul > li > a:focus {
+.logo {
+  display: inline-block;
+  padding-left: 2em;
+}
+
+.logo img {
+  vertical-align: middle;
+}
+
+.header-menu {
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+
+.header-menu > ul {
+  display: inline-block;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.header-menu > ul > li {
+  display: inline-block;
+  width: auto;
+  padding: 0 1vw;
+}
+
+.header-menu > ul > li > a:hover,
+.header-menu > ul > li > a:focus {
   color: #e74c3c;
 }
 
-.header-nav ul ul a:hover,
-.header-nav ul ul a:focus {
+.header-menu > ul ul a {
+  display: none;
+}
+
+.header-menu > ul ul a:hover,
+.header-menu > ul ul a:focus {
   background-color: #e74c3c;
   color: white;
+}
+
+body {
+  padding-top: 66px;
 }
 
 .intro {
@@ -94,38 +131,124 @@ header {
   background-size: contain, 1920px 802px;
   text-align: center;
   height: 42.5vw;
-  padding-top: 6em;
+  padding-top: 10.5%;
   color: white;
 }
 
 .intro > h1 {
   font-size: 5.75rem;
-  margin-bottom: 0.5em;
+  margin: 0 0 0.5em 0;
 }
 
 .why {
-  height: 520px;
   text-align: center;
-  padding-top: 3%;
 }
 
-.why > div {
-  margin: 0 auto;
-  width: 400px;
+.why-content {
+  padding: 6% 0;
 }
 
 .why h2 {
-  font-size: 3.875rem;
-  margin-bottom: 0.3em;
+  margin: 0 0 0.3em 0;
+  font-size: 4.8rem;
 }
 
 .why p {
-  font-size: 1.375rem;
+  font-size: 1.8rem;
   margin-bottom: 2em;
 }
 
 .services {
+  height: 640px;
+  position: relative;
+  color: white;
+}
+
+.services:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -99;
+}
+
+.services-content {
+  margin: auto;
+  padding: 60px 0 0 0;
+  width: 75vw;
+}
+
+.services-headline {
+  display: inline-block;
+  width: 250px;
+  vertical-align: top;
+  margin-right: 11vw;
+}
+
+.services-headline > h2 {
+  font-size: 2.5rem;
+  margin: 0 0 0.8em 0;
+}
+
+.services-headline p {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.services-list {
+  display: inline-block;
+}
+
+.service {
+  height: 1.8rem;
+  margin: 0 0 25px 0;
+}
+
+.service > h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #606060;
+}
+
+.service:hover > h3 {
+  color: red;
+}
+
+.service-content > figure {
+  display: inline-block;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 52%;
+  margin: 0;
+  text-align: center;
+}
+
+.service-content figure > figcaption {
+  font-size: 1.4rem;
+  padding-bottom: 30px;
+}
+
+.service-content > video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: -100;
+}
+
+.service:hover > .service-content {
+  display: inline-block;
+}
+
+.service:hover ~ .service:last-child > .service-content {
   display: none;
+}
+
+.service:hover ~ .service:last-child > h3 {
+  color: #606060;
 }
 
 .solutions {
@@ -181,7 +304,7 @@ header {
   height: 38vw;
   text-align: left;
   font-size: 1.375rem;
-  padding-left: 15vw;
+  padding-left: 14.5vw;
   padding-top: 5vw;
 }
 
@@ -200,10 +323,10 @@ header {
 
 .personalize > img {
   position: absolute;
-  height: 36vw;
+  height: 95%;
   top: 0;
   bottom: 0;
-  right: -30px;
+  right: -20px;
   margin: auto;
 }
 
@@ -255,24 +378,6 @@ header {
   vertical-align: middle;
 }
 
-.blog-list a {
-  height: 100%;
-  width: 100%;
-  color: white;
-}
-
-.blog-list p {
-  position: absolute;
-  margin: 0;
-  bottom: 10px;
-  left: 10px;
-}
-
-.blog-list span {
-  position: absolute;
-  bottom: -15px;
-}
-
 .blog-list li:nth-child(1) {
   background-image: url("../assets/blog/ibc_post_EI-750x508.png");
 }
@@ -291,6 +396,26 @@ header {
 
 .blog-list li:nth-child(5) {
   background-image: url("../assets/blog/post_quality-750x508.jpeg");
+}
+
+.blog-list a {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+.blog-list p {
+  position: absolute;
+  margin: 0;
+  bottom: 10px;
+  left: 10px;
+}
+
+.blog-list span {
+  position: absolute;
+  top: 100%;
 }
 
 .footer-left-padding {
@@ -372,8 +497,7 @@ header {
 }
 
 .footer-bottom li {
-  padding-left: 0.5vw;
-  padding-right: 0.5vw;
+  padding-right: 1vw;
 }
 
 .footer-bottom-developed {
@@ -381,7 +505,7 @@ header {
 }
 
 .footer-bottom-social {
-  padding-left: 10vw;
+  padding-left: 12.6vw;
 }
 
 .footer-bottom-social span {
